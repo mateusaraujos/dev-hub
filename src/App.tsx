@@ -1,7 +1,5 @@
+import AppRouter from "./routes/AppRouter";
+
 export default function App() {
-  return (
-    <>
-      <h1>Mateus Araújo Silva</h1>
-    </>
-  );
+  return <AppRouter />;
 }
