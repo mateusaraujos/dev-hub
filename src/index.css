@@ -26,19 +26,26 @@
   font-style: italic;
 }
 
-:root {
+* {
   font-family: "Ubuntu", sans-serif;
+}
+
+:root {
+  --primary-color: #007bff; /* Azul principal */
+  --secondary-color: #0056b3; /* Azul mais escuro */
+  --background-light: #ffffff; /* Fundo claro */
+  --background-dark: #1a1a1a; /* Fundo escuro */
+  --text-light: #000000; /* Texto no modo claro */
+  --text-dark: #ffffff; /* Texto no modo escuro */
+  --text-secondary-light: #555555; /* Texto secundário no modo claro */
+  --text-secondary-dark: #cccccc; /* Texto secundário no modo escuro */
+  --border-light: #e0e0e0; /* Bordas no modo claro */
+  --border-dark: #333333; /* Bordas no modo escuro */
+
   line-height: 1.5;
   font-weight: 400;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
-}
-
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
 }
 
 body {
@@ -47,4 +54,37 @@ body {
   place-items: center;
   min-width: 320px;
   min-height: 100vh;
+
+  background-color: var(--background-dark);
+  color: var(--text-dark);
+}
+
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+
+  background-color: var(--secondary-color);
+  color: var(--text-light);
+
+  width: 50%;
+}
+
+main .center {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+main .center button {
+  width: 5rem;
+  height: 5rem;
+  font-weight: 700;
+}
+
+img {
+  width: 10rem;
+  border-radius: 50%;
+  border: 5px solid var(--border-dark);
 }

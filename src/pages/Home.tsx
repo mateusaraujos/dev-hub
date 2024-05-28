@@ -1,4 +1,5 @@
 import { Helmet, HelmetProvider } from "react-helmet-async";
+import mainImg from "/me.png";
 
 export default function Home() {
   return (
@@ -14,7 +15,13 @@ export default function Home() {
       </HelmetProvider>
 
       <main>
-        <h1>Mateus Araújo Silva</h1>
+        <div className="center">
+          <button>Sobre</button>
+          <div>
+            <img src={mainImg} alt="Mateus Araújo Silva" />
+          </div>
+          <button>Meus projetos</button>
+        </div>
       </main>
     </>
   );
